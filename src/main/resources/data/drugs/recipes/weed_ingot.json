@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "WW"
+  ],
+  "key": {
+    "W": {
+      "item": "drugs:weed"
+    }
+  },
+  "result": {
+    "item": "drugs:weed_ingot"
+  }
+}
+

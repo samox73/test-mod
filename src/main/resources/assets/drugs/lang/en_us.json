@@ -1,0 +1,9 @@
+{
+  "block.drugs.compacted_weed": "Compacted Weed",
+  "itemGroup.drugs.general": "Drugs!",
+  "item.drugs.weed": "Weed",
+  "item.drugs.weed.tooltip": "Cute leaf.",
+  "item.drugs.weed_ingot": "Weed Ingot",
+  "item.drugs.weed_ingot.tooltip": "Take it ta da head!",
+  "item.drugs.compacted_weed.tooltip": "\"Can I get a large pepperoni pizza please?\""
+}
