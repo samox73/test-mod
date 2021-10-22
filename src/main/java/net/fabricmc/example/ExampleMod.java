@@ -1,10 +1,10 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.example.BlockItems.CompactedWeedItem;
-import net.fabricmc.example.Blocks.CompactedWeed;
-import net.fabricmc.example.Items.WeedIngotItem;
-import net.fabricmc.example.Items.WeedItem;
+import net.fabricmc.example.block_items.CompactedWeedItem;
+import net.fabricmc.example.blocks.CompactedWeed;
+import net.fabricmc.example.items.WeedIngotItem;
+import net.fabricmc.example.items.WeedItem;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -17,8 +17,10 @@ import net.minecraft.util.registry.Registry;
 
 public class ExampleMod implements ModInitializer {
 
+	public static final String MOD_ID = "drugs";
+
 	public static final ItemGroup DRUGS_GROUP = FabricItemGroupBuilder.build(
-			new Identifier("drugs", "general"),
+			new Identifier(MOD_ID, "general"),
 			() -> new ItemStack(Blocks.VINE)
 	);
 
@@ -33,17 +35,16 @@ public class ExampleMod implements ModInitializer {
 	public static final CompactedWeedItem COMPACTED_WEED_ITEM =
 			new CompactedWeedItem(COMPACTED_WEED, new FabricItemSettings().group(DRUGS_GROUP));
 
-
 	@Override
 	public void onInitialize() {
 		// Items
-		Registry.register(Registry.ITEM, new Identifier("drugs", "weed"), WEED_ITEM);
-		Registry.register(Registry.ITEM, new Identifier("drugs", "weed_ingot"), WEED_INGOT_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "weed"), WEED_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "weed_ingot"), WEED_INGOT_ITEM);
 
 		// Blocks
-		Registry.register(Registry.BLOCK, new Identifier("drugs", "compacted_weed"), COMPACTED_WEED);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "compacted_weed"), COMPACTED_WEED);
 
 		// Block-Items
-		Registry.register(Registry.ITEM, new Identifier("drugs", "compacted_weed"), COMPACTED_WEED_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "compacted_weed"), COMPACTED_WEED_ITEM);
 	}
 }

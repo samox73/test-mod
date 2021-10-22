@@ -1,4 +1,4 @@
-package net.fabricmc.example.Blocks;
+package net.fabricmc.example.blocks;
 
 import net.minecraft.block.Block;
 
